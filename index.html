@@ -389,6 +389,18 @@ Shopify.SignInWithShop.User.recognized = false;</script>
       
     </style>
 
+<style>
+  html, body {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  body {
+    position: relative;
+    top: 0 !important;
+  }
+</style>
+
     <link href="css/base.css" rel="stylesheet" type="text/css" media="all">
     
     <link href="css/clean-page.css" rel="stylesheet" type="text/css" media="all">
@@ -690,6 +702,72 @@ jdgm.loadCSS(jdgm.CDN_BASE_URL+"widget_base.css"):jdgm.loadCSS(jdgm.CDN_BASE_URL
 
 
 <script id="kaching-bundles-config" type="application/json">
+  {
+    "shopifyDomain": "a6720b-3.myshopify.com",
+    "moneyFormat": "€{{amount_with_comma_separator}}",
+    "locale": "en",
+    "liquidLocale": "en",
+    "country": "NL",
+    "currencyRate": 1,
+    "marketCurrencyCode": "EUR",
+    "marketId": 44901990717,
+    "productId": null,
+    "storefrontAccessToken": "0f37118e9266a07a17443d1d1cbec0e6",
+    "includeSellingPlans": true,
+    "includeAvailableQuantidade": true,
+    "customApiHost": null,
+    "keepQuantidadeInput": false,
+    "ignoreDeselect": false,
+    "ignoreUnitPrice": false,
+    "requireCustomerLogin": false,
+    "abTestsRunning": false,
+    "webPixel": true,
+    "b2bCustomer": false,
+    "isLoggedIn": false,
+    "isDeprecatedAppEmbed": false,
+    "preview": false,
+    "defaultTranslations": {
+      "system.out_of_stock": "There\u0026#39;s not enough items in our stock, please select smaller bundle.",
+      "system.invalid_variant": "Desculpe, isso não está disponível no momento.",
+      "system.unavailable_option_value": "Indisponível",
+      "system.confirm": "Confirmar",
+      "system.cancel": "Cancel",
+      "system.free": "GRÁTIS",
+      "system.search": "Pesquisar",
+      "system.sort_by": "Ordenar por",
+      "system.sort_relevance": "Relevância",
+      "system.sort_newest_first": "Mais recentes primeiro",
+      "system.sort_price_low_to_high": "Preço: do menor para o maior",
+      "system.sort_price_high_to_low": "Preço: do maior para o menor",
+      "system.no_results_found": "Nenhum resultado encontrado",
+      "system.no_results_description": "Não encontramos nenhum item correspondente à sua pesquisa.",
+      "system.clear_search": "Limpar pesquisa",
+      "system.no_products_available": "Nenhum produto disponível",
+      "system.letters_only": "Somente letras são permitidas.",
+      "system.numbers_only": "Somente números são permitidos.",
+      "system.select_variant_alert": "Selecione uma variante.",
+      "system.select_variant_placeholder": "Selecionar",
+      "system.personalisation_required_alert": "Adicione a personalização de cada item para continuar.",
+      "system.quantity": "Quantidade",
+      "system.subscription_plan": "Plano de assinatura",
+      "system.remove": "Remover",
+      "system.original_price": "Preço original:",
+      "system.price": "Preço:"
+
+    },
+    "customSelecionarors": {
+      "quantity": null,
+      "addToCartButton": null,
+      "variantPicker": null,
+      "price": null,
+      "priceCompare": null,
+      "label": null
+    },
+    "shopCustomStyles": ".kaching-bundles__subscriptions__checkbox{border-radius:50% !important;border-width:2.5px !important;}.kaching-bundles__subscriptions__checkbox svg{width:stretch;height:stretch;margin:0;display:block;border-radius:50%;background:var(--bar-selected-border-color,currentColor);fill:var(--bar-selected-border-color,currentColor);pointer-events:none;border:3px solid #fff;}.kaching-bundles__subscriptions__checkbox svg *{display:none;}",
+    "brandColors": {"error":"#D72C2C","border":"#3B453B4D","overlay":"#000000","badgeText":"#FDFBF7","primaryText":"#121212","primaryAccent":"#3B453B","secondaryText":"#555555","badgeBackground":"#3B453B","primaryAccentText":"#FDFBF7","primaryBackground":"#FFFFFF","secondaryBackground":"#E7E9E7"},
+    "featureFlags": {"cart_change_response_rewrite":false,"cart_interceptor_dedupe_disabled":false,"cart_interceptor_json_encoding":false,"debug_cart_add":false,"disable_nested_cart_lines":false,"early_fetch_override":false,"hide_missing_variants":false,"initialize_with_form_variant":true,"intercept_cart_request":false,"legacy_saved_percentage":false,"native_swatches_disabled":false,"observe_external_selling_plan":false,"observe_form_selling_plan":true,"percentage_cents_rounding_workaround":false,"pos_extension":false,"preserve_variant_selections":false,"price_rounding_v2":false,"propagate_line_properties":false,"propagate_picker_option_changes":false,"reinitialize_morphed_placeholders":false,"remove_variant_change_delay":false,"split_bxgy_items":false,"storefront_metaobjects":false,"variant_images":false}
+
+  }
 </script>
 
 <!-- BEGIN app snippet: translations -->
@@ -1394,6 +1472,9 @@ first.parentNode.insertBefore(script, first);
 
 
 
+    <a class="skip-to-content-link button visually-hidden" href="#MainContent">
+      Pular para o conteúdo
+    </a>
 
 <script src="js/cart.js" defer="defer"></script>
 <script src="js/product-info.js" defer="defer"></script>
@@ -1410,7 +1491,8 @@ first.parentNode.insertBefore(script, first);
 </style>
 
 <cart-drawer class="drawer is-empty">
-<div id="CartDrawer" class="cart-drawer">
+
+    <div id="CartDrawer" class="cart-drawer">
     <div id="CartDrawer-Overlay" class="cart-drawer__overlay"></div>
     <div class="drawer__inner" role="dialog" aria-modal="true" aria-label="Seu carrinho" tabindex="-1"><div class="drawer__inner-empty">
           <div class="cart-drawer__warnings center">
@@ -2884,8 +2966,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   <div id="shopify-block-AeHhSMHRscDBnTDlvW__15885745614559378752" class="shopify-block shopify-app-block"><div id="accessibly-config" style="display:none">
-    {"themeColor":"#3b453b","iconColor":"#3b453b","showLogo":true,"topBottomPosition":50,"rightLeftPosition":10,"iconSize":"small","iconCustomSize":64,"position":"top-left"}
-</div>
 
 
 </div><script src="js/standard-actions.js" type="module" data-source-attribution="shopify.standard_actions"></script>
