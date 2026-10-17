@@ -1,0 +1,9 @@
+/* main page body hide for hypo prelanders */
+body.cleansl8-6 h1.main-page-title,
+body.cleansl8-6 .page-width--narrow > .rte,
+body.cleansl8-6 .shopify-section.section:has(h1.main-page-title),
+body.cleansl8-7 h1.main-page-title,
+body.cleansl8-7 .page-width--narrow > .rte,
+body.cleansl8-7 .shopify-section.section:has(h1.main-page-title) {
+  display: none !important;
+}
