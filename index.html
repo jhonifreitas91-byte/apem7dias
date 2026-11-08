@@ -1020,7 +1020,7 @@ document.addEventListener('DOMContentLoaded', function () {
     feedback.className = 'quiz-feedback';
     note.textContent = 'Selecione uma alternativa para continuar.';
     nextButton.disabled = true;
-    nextButton.textContent = currentQuestion === 3 ? 'AGUARDE...' : 'PRÓXIMO';
+    nextButton.textContent = currentQuestion === 3 ? 'CONTINUAR' : 'PRÓXIMO';
 
     q.options.forEach(function(optionText, index){
       const button = document.createElement('button');
